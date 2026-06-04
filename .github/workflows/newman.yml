@@ -20,7 +20,7 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Lint OpenAPI contracts
         run: npm run lint:contracts
@@ -35,6 +35,9 @@ jobs:
 
       - name: Run Newman contract tests
         run: npm run test:mock
+
+      - name: Generate Newman HTML report
+        run: npm run test:html
 
       - name: Show Prism logs on failure
         if: failure()

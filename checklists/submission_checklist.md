@@ -2,16 +2,23 @@
 
 Trước khi nộp, repo nhóm cần có:
 
-```text
-contracts/<team>.openapi.yaml
-postman/collections/<team>.postman_collection.json
-postman/environments/<team>_mock.postman_environment.json
-postman/environments/<team>_local.postman_environment.json
-reports/newman-report.xml hoặc reports/newman-report.html
-checklists/reliability_checklist.md
-templates/test-case-matrix.csv
-templates/consumer-provider-handshake.md
-```
+- [x] contracts/iot-ingestion.openapi.yaml
+- [x] contracts/ai-vision.openapi.yaml
+- [x] postman/collections/FIT4110_lab03_iot_ingestion.postman_collection.json
+- [x] postman/environments/FIT4110_lab03_mock.postman_environment.json
+- [x] postman/environments/FIT4110_lab03_local.postman_environment.json
+- [x] reports/newman-report.xml
+- [x] reports/newman-report.html
+- [x] reports/contract-lint-report.txt
+- [x] checklists/reliability_checklist.md
+- [x] templates/test-case-matrix.csv
+- [x] templates/consumer-provider-handshake.md
+
+## Ghi chú
+
+- Mock environment test đã chạy thành công bằng `npm run test:mock`.
+- Contract lint đã chạy thành công bằng `npm run lint:contracts`.
+- Local environment file đã có sẵn; test local có thể chạy bằng `npm run test:local` khi service thật sẵn sàng.
 
 ## Quy ước commit
 
@@ -19,7 +26,7 @@ Gợi ý commit cuối:
 
 ```bash
 git add .
-git commit -m "lab03: add postman contract tests and newman report"
+git commit -m "lab03: complete postman mock tests, reports, and submission artifacts"
 git push
 ```
 
